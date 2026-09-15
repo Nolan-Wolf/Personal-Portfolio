@@ -51,7 +51,7 @@ nav.topnav {
   padding: 1.1rem 2rem;
   background: rgba(238, 241, 245, 0.88);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 2px solid var(--amber);
 }
 nav.topnav .wordmark {
   font-family: var(--serif);
