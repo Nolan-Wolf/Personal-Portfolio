@@ -98,7 +98,9 @@ main.stack {
   display: flex;
   align-items: center;
   padding: 6rem 2rem 4rem;
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image: radial-gradient(#14202c26 1px, transparent 1px);
+  background-size: 22px 22px;
   box-shadow: 0 -18px 40px rgba(20, 32, 44, 0.14);
 }
 
