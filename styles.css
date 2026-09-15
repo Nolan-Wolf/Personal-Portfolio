@@ -261,6 +261,77 @@ footer.site-footer a { color: rgba(238,241,245,0.9); }
   .stat-row { gap: 1.5rem; }
 }
 
+/* ---------- Allocation visual ---------- */
+:root {
+  --alloc-etfs: var(--blue);
+  --alloc-stocks: var(--amber);
+  --alloc-crypto: #b8788a;
+  --alloc-cash: #8a97a6;
+}
+
+.alloc-bar {
+  display: flex;
+  width: 100%;
+  height: 28px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 1.75rem 0 1.5rem;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.alloc-seg { height: 100%; }
+.alloc-seg.etfs   { background: var(--alloc-etfs); }
+.alloc-seg.stocks { background: var(--alloc-stocks); }
+.alloc-seg.crypto { background: var(--alloc-crypto); }
+.alloc-seg.cash   { background: var(--alloc-cash); }
+
+.alloc-rows { display: flex; flex-direction: column; gap: 1.1rem; }
+.alloc-row-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+}
+.alloc-row-head .alloc-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.alloc-dot.etfs   { background: var(--alloc-etfs); }
+.alloc-dot.stocks { background: var(--alloc-stocks); }
+.alloc-dot.crypto { background: var(--alloc-crypto); }
+.alloc-dot.cash   { background: var(--alloc-cash); }
+.alloc-row-head .alloc-name { font-family: var(--sans); font-weight: 600; font-size: 0.98rem; color: var(--white); }
+.alloc-row-head .alloc-count { opacity: 0.65; }
+.alloc-row-head .alloc-pct { margin-left: auto; color: var(--amber); font-size: 1rem; }
+
+.alloc-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip {
+  font-family: var(--mono);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.3rem 0.6rem;
+  font-size: 0.78rem;
+  color: rgba(238,241,245,0.9);
+  white-space: nowrap;
+}
+.chip em { font-style: normal; opacity: 0.65; margin-left: 0.35rem; }
+.chip.lg { font-size: 0.88rem; padding: 0.4rem 0.75rem; border-color: rgba(255,255,255,0.4); }
+
+.thesis-block p { max-width: 66ch; }
+.memo-callout {
+  margin-top: 1.75rem;
+  border-left: 3px solid var(--amber);
+  padding: 0.9rem 0 0.9rem 1.1rem;
+}
+.memo-callout p { margin-bottom: 0.4rem; }
+
+@media (max-width: 640px) {
+  .alloc-row-head { flex-wrap: wrap; }
+  .alloc-row-head .alloc-pct { margin-left: 0; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
